@@ -215,7 +215,7 @@ td {
 }
 
 tbody tr:nth-child(even) {
-    background: #f8fafc;
+    background: #367cc2;
 }
 
 tbody tr:hover {
