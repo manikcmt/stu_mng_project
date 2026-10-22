@@ -12,10 +12,11 @@ const studentTable = document.getElementById("studentTable");
 const message = document.getElementById("message");
 
 const studentIdInput = document.getElementById("studentId");
+const roll = document.getElementById("roll");
 const firstName = document.getElementById("first_name");
 const lastName = document.getElementById("last_name");
 const department = document.getElementById("department");
-const roll = document.getElementById("roll");
+
 const session = document.getElementById("session");
 
 const formTitle = document.getElementById("formTitle");
@@ -72,11 +73,12 @@ async function loadStudents() {
 
             row.innerHTML = `
                 <td>${student.id}</td>
+                <td>${student.roll}</td>
                 <td>${student.first_name}</td>
                 <td>${student.last_name}</td>
                 <td>${student.department}</td>
                 <td>${student.session}</td>
-                <td>${student.roll}</td>
+                
                 <td>
                     <button class="edit">Edit</button>
                     <button class="delete">Delete</button>
@@ -110,11 +112,12 @@ async function loadStudents() {
 // =========================
 function editStudent(student) {
     studentIdInput.value = student.id;
+    roll.value = student.roll;
     firstName.value = student.first_name;
     lastName.value = student.last_name;
     department.value = student.department;
-    session.value = student.session;
-    roll.value = student.roll
+    session.value = student.session
+
 
     formTitle.textContent = "Update Student";
     submitBtn.textContent = "Update Student";
@@ -154,11 +157,12 @@ form.addEventListener("submit", async (event) => {
     const id = studentIdInput.value;
 
     const student = {
+        roll: roll.value(),
         first_name: firstName.value.trim(),
         last_name: lastName.value.trim(),
         session: Number(session.value.trim()),
-        department: department.value.trim(),
-        roll: roll.value
+        department: department.value.trim
+
     };
 
     if (!student.first_name || !student.department || !student.roll) {
