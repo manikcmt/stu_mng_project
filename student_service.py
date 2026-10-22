@@ -24,9 +24,9 @@ class StudentService:
         return self.repository.update_student(db, student)
 
     def create_student(self, db: Session, student_payload : StudentCreateRequet):
-        student = Student(first_name = student_payload.first_name,
+        student = Student(roll = student_payload.roll,
+                            first_name = student_payload.first_name,
                             last_name = student_payload.last_name,
-                            roll = student_payload.roll, 
                             session = student_payload.session,
                             department = student_payload.department)
         return self.repository.create_student(db,student)
