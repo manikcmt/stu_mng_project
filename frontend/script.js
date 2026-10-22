@@ -1,7 +1,7 @@
 // =========================
 // API URL (Change this)
 // =========================
-const API_URL = "https://practice-session-uoiq.onrender.com";
+const API_URL = "https://stu-mng-project.onrender.com";
 const STUDENTS_URL = `${API_URL}/students/`;
 
 // =========================
@@ -156,7 +156,7 @@ form.addEventListener("submit", async (event) => {
     const student = {
         first_name: firstName.value.trim(),
         last_name: lastName.value.trim(),
-        session : Number(session.value.trim()),
+        session: Number(session.value.trim()),
         department: department.value.trim(),
         roll: roll.value
     };
@@ -168,8 +168,8 @@ form.addEventListener("submit", async (event) => {
 
 
     const url = id
-        ? `${STUDENTS_URL}`+`update/${roll.value}`
-        : STUDENTS_URL+'create';
+        ? `${STUDENTS_URL}` + `update/${roll.value}`
+        : STUDENTS_URL + 'create';
 
     const method = id ? "PATCH" : "POST";
 
