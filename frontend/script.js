@@ -157,11 +157,11 @@ form.addEventListener("submit", async (event) => {
     const id = studentIdInput.value;
 
     const student = {
-        roll: roll.value(),
+        roll: roll.value,
         first_name: firstName.value.trim(),
         last_name: lastName.value.trim(),
         session: Number(session.value.trim()),
-        department: department.value.trim
+        department: department.value.trim()
 
     };
 
