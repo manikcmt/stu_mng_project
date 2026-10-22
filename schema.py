@@ -2,9 +2,9 @@ from pydantic import BaseModel
 
 
 class BaseStudent(BaseModel):
+    roll: str
     first_name: str
     last_name: str
-    roll: str
     session: int
     department: str
 
